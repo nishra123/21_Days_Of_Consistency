@@ -39,10 +39,13 @@ class Solution {
 public:
     void merge(vector<int>& nums1, int m, vector<int>& nums2, int n) {
         int i;
+        //to remove all the zeroes from latter half in vector nums1
         nums1.erase(std::remove(nums1.begin()+m, nums1.end(), 0), nums1.end());
+        //merging the two vectors
         for(i=0; i<n; i++){
             nums1.push_back(nums2[i]);
         }
+        //sorting vector nums1 as we have to return a sorted vector
         sort(nums1.begin(), nums1.end());
         for(i=0; i<nums1.size(); i++){
             cout<<nums1[i]<<",";
