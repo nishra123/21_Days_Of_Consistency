@@ -47,9 +47,6 @@ public:
         }
         //sorting vector nums1 as we have to return a sorted vector
         sort(nums1.begin(), nums1.end());
-        for(i=0; i<nums1.size(); i++){
-            cout<<nums1[i]<<",";
-        }
     }
 };
 ```
